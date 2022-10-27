@@ -1,0 +1,571 @@
+html {
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+a:visited {
+  color: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+nav {
+  position: relative;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+}
+
+a.skip-to-main-content {
+  position: absolute;
+  padding: 0.6rem;
+  background: #be3249;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  left: calc(50% - 120px);
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+  opacity: 0;
+}
+a.skip-to-main-content:focus-within {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border-bottom: 1px solid #ececec;
+}
+@media only screen and (min-width: 75em) {
+  .nav-header {
+    padding: 0 50px;
+  }
+}
+.nav-header a {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #292929;
+}
+.nav-header a:hover {
+  text-decoration: underline;
+}
+.nav-header a.underscore {
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 4px solid #478175;
+}
+.nav-header a.highlight {
+  background: #be3249;
+  color: #ffffff;
+  border-bottom: 4px solid #be3249;
+}
+.nav-header .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.nav-header .search a {
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  transition: background-color 0.5s ease-in-out;
+}
+.nav-header .search a:hover {
+  background-color: #ececec;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in-out;
+}
+.nav-header .search i {
+  font-size: 1.25rem;
+}
+
+.nav-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  margin: 20px 0;
+}
+@media only screen and (min-width: 75em) {
+  .nav-main {
+    padding: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.nav-main a {
+  text-decoration: none;
+}
+.nav-main .logo {
+  display: flex;
+  align-items: center;
+}
+.nav-main .logo img {
+  transform: rotate(-25deg);
+}
+.nav-main .logo .brand {
+  color: #292929;
+  font-size: 1.75rem;
+}
+.nav-main .logo span {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-indent: 3px;
+}
+@media only screen and (min-width: 75em) {
+  .nav-main .logo span {
+    font-size: 1rem;
+    line-height: 0.875rem;
+  }
+}
+.nav-main ul {
+  padding-left: 0;
+  text-align: center;
+}
+.nav-main ul li {
+  text-align: center;
+}
+.nav-main ul a {
+  display: inline-block;
+  padding: 0.2rem 0.2rem;
+  margin: 0.25rem 0.3rem;
+  border-bottom: 2px solid #478175;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #292929;
+  text-align: center;
+}
+@media only screen and (min-width: 75em) {
+  .nav-main ul a {
+    border-bottom: 3px solid transparent;
+    transition: border 0.5s ease-in-out;
+    text-align: left;
+  }
+  .nav-main ul a:hover {
+    border-bottom: 3px solid #478175;
+    transition: border 0.5s ease-in-out;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px 0;
+    grid-template-areas: "hero hero" "hero-sideimage hero-content";
+  }
+}
+
+.hero {
+  grid-area: hero;
+  padding: 50px 50px 20px 50px;
+  height: 340px;
+  background: url("./images/pexels-andrea-piacquadio.jpg") no-repeat;
+  background-size: cover;
+  background-position: 70%;
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  .hero {
+    height: 440px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .hero {
+    background-position: unset;
+  }
+}
+.hero h1 {
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: #487c8f;
+  color: #ffffff;
+}
+@media only screen and (min-width: 48em) {
+  .hero h1 {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .hero h1 {
+    font-size: 3.875rem;
+  }
+}
+.hero p {
+  margin: 0 0 1.5rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  color: #478175;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+@media only screen and (min-width: 48em) {
+  .hero p {
+    max-width: 50%;
+  }
+}
+.hero a {
+  background-color: #ffffff;
+  color: #be3249;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: none;
+  padding: 0.625rem 1rem;
+}
+.hero a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hero-sideimage {
+  display: none;
+}
+@media only screen and (min-width: 62em) {
+  .hero-sideimage {
+    display: grid;
+    grid-area: hero-sideimage;
+  }
+  .hero-sideimage img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hero-content {
+  grid-area: hero-content;
+  position: relative;
+  padding: 2rem 1.5rem;
+  background: #478175;
+  color: #ffffff;
+  overflow: hidden;
+}
+@media only screen and (min-width: 75em) {
+  .hero-content {
+    padding: 3rem 2rem;
+  }
+}
+.hero-content p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+.hero-content a {
+  background-color: none;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+}
+.hero-content a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.hero-content img {
+  position: absolute;
+  width: 75%;
+  bottom: -15%;
+  right: -15%;
+  opacity: 0.1;
+  transform: rotate(-35deg);
+}
+@media only screen and (min-width: 75em) {
+  .hero-content img {
+    bottom: -35%;
+    right: -30%;
+  }
+}
+
+.help {
+  padding: 2rem 1.5rem;
+  background-color: #ececec;
+  color: #000000;
+}
+@media only screen and (min-width: 75em) {
+  .help {
+    padding: 2rem 3rem;
+  }
+}
+.help h3 {
+  margin-bottom: 1rem;
+}
+.help .help-cta, .help select {
+  font-size: 0.875rem;
+}
+@media only screen and (min-width: 48em) {
+  .help .help-cta, .help select {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .help .help-cta, .help select {
+    font-size: 1.5rem;
+  }
+}
+.help .help-cta {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 62em) {
+  .help .help-cta {
+    padding: 2rem;
+    background-color: #ffffff;
+    text-align: left;
+  }
+}
+.help .help-cta .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.help .help-cta .dropdown i {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.help .help-cta select {
+  border-bottom: 2px solid #487c8f;
+  color: #487c8f;
+  font-weight: bold;
+}
+@media only screen and (min-width: 62em) {
+  .help .help-cta select {
+    margin: 0 1rem;
+  }
+}
+.help .help-cta select:hover {
+  cursor: pointer;
+}
+.help .help-cta button {
+  background-color: #be3249;
+  color: #ffffff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: none;
+  padding: 0.625rem 1rem;
+  margin-top: 1.5rem;
+}
+.help .help-cta button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 48em) {
+  .help .help-cta button {
+    margin-top: 0;
+  }
+}
+
+.whatdowedo {
+  padding: 2rem 1.5rem;
+  background-color: #487c8f;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 75em) {
+  .whatdowedo {
+    padding: 2rem 3rem;
+  }
+}
+.whatdowedo h3, .whatdowedo p {
+  color: #ffffff;
+}
+.whatdowedo h3 {
+  margin-bottom: 1rem;
+}
+.whatdowedo p {
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+.whatdowedo .cta {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+}
+.whatdowedo .cta a {
+  background-color: #ffffff;
+  color: #be3249;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: none;
+  padding: 0.625rem 1rem;
+}
+.whatdowedo .cta a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 62em) {
+  .cards {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .cards {
+    gap: 0;
+  }
+}
+
+.card {
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  background: #ffffff;
+  color: #000000;
+}
+.card h4, .card p {
+  color: #000000;
+}
+.card h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+.card a {
+  background-color: none;
+  color: #be3249;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border: 2px solid #292929;
+  padding: 0.5rem 1rem;
+}
+.card a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.events .event {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  margin-top: 2rem;
+}
+.events figure {
+  display: none;
+}
+@media only screen and (min-width: 48em) {
+  .events figure {
+    display: block;
+    width: 50%;
+  }
+  .events figure img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.events .event-details {
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #ececec;
+}
+
+.events .event-details a {
+  color: #be3249;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 48em) {
+  .events .event-details {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+.events .event-details .description h3 {
+  padding: 1rem;
+  background-color: #478175;
+  color: #ffffff;
+}
+.events .event-details .description h4 {
+  padding: 0 1rem;
+  font-weight: normal;
+}
+.events .event-details .details {
+  padding: 0 1rem;
+}
+.events .event-details .details p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Wordpress only */
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #be3249;
+  font-weight: bold;
+  font-size: 1rem;
+}/*# sourceMappingURL=base.css.map */
